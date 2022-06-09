@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const path = require('path')
 const app = express();
 
+app.use(express.static('todo/build'));
 app.use(express.json());
 app.use(cors());
 app.use(cookieParser());
@@ -17,7 +18,7 @@ mongoose.connect(url,err=>{
     if(err) throw err;
     console.log("DB Connect")
 })
-app.use(express.static('todo/build'));
+
 app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname,"todo/build/index.html"));
 });
