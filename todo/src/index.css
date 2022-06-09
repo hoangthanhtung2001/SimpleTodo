@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: wheat;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  background-color: white;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px 10px;
+}
+
+.App h2{
+  text-align: center;
+}
+.App .modals{
+  text-align: center;
+}
+
+.none{
+  display: none;
+}
+.list-items{
+  border-bottom: 1px solid black;
+  
+  list-style: none;
+}
+.list-items li{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+.list-items li input{
+  margin-top: 24px;
+}
+
+.list-items li form{
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.list-items li form .box{
+  display: flex;
+}
+
+.list-items li form .btn{
+  line-height: 54px;
+}
+.btn button{
+  margin-left: 20px;
+  cursor: pointer;
+}
+.list-items li .change{
+  text-decoration-line: line-through;
+}
+.footer{
+  display: flex;
+  margin-top: 20px;
+}
+.footer .icon{
+  display: flex;
+  flex: 0.5;
+}
+.footer .icon i{
+  margin-left: 10px;
+  line-height: 22px;
+}
+.footer .list-count{
+  flex: 0.5;
+  margin-left: 60px;
+  line-height: 22px;
+}
+.footer .status-change{
+  list-style: none;
+  display: flex;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.footer .status-change li a{
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  padding: 0px 10px;
+  text-align: center;
+}
+
+.active{
+  background-color:crimson;
+}
