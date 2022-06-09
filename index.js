@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.static('todo/build'));
 app.use(express.json());
-app.use(cors({origin:"*"}));
+app.use(cors());
 app.use(cookieParser());
 app.use("/todo", require('./router/route'))
 //conect to DB

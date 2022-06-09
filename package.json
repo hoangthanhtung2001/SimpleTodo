@@ -6,10 +6,10 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "cd todo && npm run start",
+    "client": "node index.js",
     "server-install": "npm install",
     "client-install": "cd todo && npm install",
-    "install-all": "concurrently \"npm run server-install\"  \"npm run todo-install\"",
+    "install-all": "concurrently \"npm run index-install\"  \"npm run todo-install\"",
     "dev": "concurrently \"npm run server\"  \"npm run client\"",
     "heroku-postbuild": "cd todo && npm install && npm run build"
   },
