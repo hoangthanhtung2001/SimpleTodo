@@ -8,12 +8,11 @@ const app = express();
 
 app.use(express.static('todo/build'));
 app.use(express.json());
-app.use(cors());
+app.use(cors({origin:"*"}));
 app.use(cookieParser());
 app.use("/todo", require('./router/route'))
 //conect to DB
 const url = process.env.MONGO_URL
-console.log(url)
 mongoose.connect(url,err=>{
     if(err) throw err;
     console.log("DB Connect")
