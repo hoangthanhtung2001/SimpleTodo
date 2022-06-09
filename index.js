@@ -21,9 +21,7 @@ mongoose.connect(url,err=>{
 app.get('*', (req, res) => {
 res.sendFile(path.resolve(__dirname,'todo', 'build', 'index.html'));
 });
-app.get('/',(req,res)=>{
-    res.json("Hello")
-})
+
 
 const PORT = process.env.PORT || 5000;
 
