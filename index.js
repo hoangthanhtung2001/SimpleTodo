@@ -19,7 +19,7 @@ mongoose.connect(url,err=>{
 })
 app.use(express.static('todo/build'));
 app.get('*', (req, res) => {
-res.sendFile(path.resolve(__dirname, 'todo', 'build', 'index.html'));
+res.sendFile(path.resolve(__dirname,"todo/build/index.html"));
 });
 app.get('/',(req,res)=>{
     res.json("Hello")
