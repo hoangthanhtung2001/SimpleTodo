@@ -17,9 +17,11 @@ mongoose.connect(url,err=>{
     if(err) throw err;
     console.log("DB Connect")
 })
-app.get('*', (req, res) => {
-res.sendFile(path.resolve(__dirname,'todo', 'build', 'index.html'));
-});
+if(process.env.NODE_ENV ==="production"){
+    app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname,'todo', 'build', 'index.html'));
+    });
+}
 
 
 const PORT = process.env.PORT || 5000;
