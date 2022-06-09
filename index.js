@@ -17,9 +17,9 @@ mongoose.connect(url,err=>{
     if(err) throw err;
     console.log("DB Connect")
 })
-app.use(express.static('client/build'));
+app.use(express.static('todo/build'));
 app.get('*', (req, res) => {
-res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+res.sendFile(path.resolve(__dirname, 'todo', 'build', 'index.html'));
 });
 app.get('/',(req,res)=>{
     res.json("Hello")
