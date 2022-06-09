@@ -20,7 +20,7 @@ mongoose.connect(url,err=>{
 })
 
 app.get('*', (req, res) => {
-res.sendFile(path.join(__dirname,"todo/build/index.html"));
+res.sendFile(path.join(__dirname,'client', 'build', 'index.html'));
 });
 app.get('/',(req,res)=>{
     res.json("Hello")
