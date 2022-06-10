@@ -13,15 +13,18 @@ app.use(cookieParser());
 app.use("/todo", require('./router/route'))
 //conect to DB
 const url = process.env.MONGO_URL
-mongoose.connect(url,err=>{
+mongoose.connect(url|| "mongodb+srv://thanhtung:1234@cluster0.lriex.mongodb.net/Web?retryWrites=true&w=majority",err=>{
     if(err) throw err;
     console.log("DB Connect")
 })
-if(process.env.NODE_ENV ==="production"){
-    app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname,'todo', 'build', 'index.html'));
-    });
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static('todo/build'))
+    app.get('*', (req, res)=>{
+        res.sendFile(path.join(__dirname, 'todo', 'build', 'index.html'))
+    })
 }
+
 
 
 const PORT = process.env.PORT || 5000;
