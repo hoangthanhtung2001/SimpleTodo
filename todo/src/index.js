@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import {BrowserRouter} from'react-router-dom'
 import {QueryClient, QueryClientProvider} from'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
-axios.defaults.baseURL ="http://localhost:5000/todo/"
+axios.defaults.baseURL ="/todo"
 
 
 const queryClient = new QueryClient({
